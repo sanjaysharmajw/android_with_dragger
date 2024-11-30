@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_home_nav"
+    app:startDestination="@id/navHomeFragment">
+
+    <fragment
+        android:id="@+id/navHomeFragment"
+        android:name="com.rv.tasktechstalwarts.feature_dashboard.presentation.NavHomeFragment"
+        android:label="fragment_nav_home"
+        tools:layout="@layout/fragment_nav_home" >
+        <action
+            android:id="@+id/action_navHomeFragment_to_itemDetailsFragment"
+            app:destination="@id/itemDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navFavouritesFragment"
+        android:name="com.rv.tasktechstalwarts.feature_dashboard.presentation.NavFavouritesFragment"
+        android:label="fragment_nav_favourites"
+        tools:layout="@layout/fragment_nav_favourites" />
+
+    <fragment
+        android:id="@+id/itemDetailsFragment"
+        android:name="com.rv.tasktechstalwarts.feature_dashboard.presentation.ItemDetailsFragment"
+        android:label="fragment_item_details"
+        tools:layout="@layout/fragment_item_details" >
+        <argument
+            android:name="itemModel"
+            app:argType="com.rv.tasktechstalwarts.feature_dashboard.domain.model.Recipe" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addToCartFragment"
+        android:name="com.rv.tasktechstalwarts.feature_dashboard.presentation.AddToCartFragment"
+        android:label="fragment_add_to_cart"
+        tools:layout="@layout/fragment_add_to_cart" />
+</navigation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abeezee</item>
+        <item>@font/abeezee_italic</item>
+        <item>@font/abel</item>
+        <item>@font/abhaya_libre_extrabold</item>
+        <item>@font/alfa_slab_one</item>
+        <item>@font/chango</item>
+        <item>@font/climate_crisis</item>
+        <item>@font/erica_one</item>
+        <item>@font/plus_jakarta_sans_bold</item>
+        <item>@font/plus_jakarta_sans_medium</item>
+        <item>@font/plus_jakarta_sans_semibold</item>
+    </array>
+</resources>

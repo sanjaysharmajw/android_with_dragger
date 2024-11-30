@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/itemLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_10"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/filterTypeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/regularTextGrey17"
+        android:minWidth="@dimen/size_80"
+        android:textAlignment="textStart"
+        android:paddingStart="@dimen/margin_15"
+        android:paddingEnd="@dimen/margin_25"
+        android:padding="@dimen/margin_5"
+        android:text="Foods"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin_10"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="@dimen/margin_3"
+        android:background="@color/orange"
+        android:visibility="invisible"
+        android:layout_marginTop="@dimen/margin_3"
+        app:layout_constraintStart_toStartOf="@id/filterTypeName"
+        app:layout_constraintEnd_toEndOf="@id/filterTypeName"
+        app:layout_constraintTop_toBottomOf="@id/filterTypeName"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

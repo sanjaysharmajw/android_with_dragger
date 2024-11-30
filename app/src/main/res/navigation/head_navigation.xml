@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/head_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.rv.tasktechstalwarts.feature_login.presentation.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.rv.tasktechstalwarts.feature_login.presentation.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_nested_dash_navigation"
+            app:destination="@id/nested_dash_navigation" />
+    </fragment>
+
+    <navigation
+        android:id="@+id/nested_dash_navigation"
+        app:startDestination="@id/dashboardFragment">
+        <fragment
+            android:id="@+id/dashboardFragment"
+            android:name="com.rv.tasktechstalwarts.feature_dashboard.presentation.DashboardFragment"
+            android:label="fragment_dashboard"
+            tools:layout="@layout/fragment_dashboard" />
+    </navigation>
+</navigation>

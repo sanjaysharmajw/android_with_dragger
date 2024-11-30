@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".feature_dashboard.presentation.ItemDetailsFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:padding="@dimen/margin_10"
+        android:src="@drawable/ic_back_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icFavourite"
+        app:layout_constraintBottom_toBottomOf="@id/icFavourite"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icFavourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_35"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:padding="@dimen/margin_10"
+        android:src="@drawable/ic_favourite_unselect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0"
+        app:layout_constraintTop_toBottomOf="@id/icFavourite"
+        app:layout_constraintBottom_toTopOf="@id/btnAddToCart"
+        android:paddingBottom="@dimen/margin_20"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/margin_30"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/margin_30"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/size_240"
+            android:layout_height="@dimen/size_240"
+            android:src="@drawable/details_slider_image"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDishName"
+            style="@style/italicBlack28"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="Veggie tomato mix"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDishNum"
+            style="@style/italicOrange22"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text=""
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvDishName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDeliveryInfo"
+            style="@style/italicBlack17"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/delivery_info"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvDishNum" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDeliveryInfoDetails"
+            style="@style/regularTextGrey15"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="Delivered between monday aug and thursday 20 from 8pm to 91:32 pm"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvDeliveryInfo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReturnPolicy"
+            style="@style/italicBlack17"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:text="@string/return_policy"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvDeliveryInfoDetails" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReturnPolicyDetails"
+            style="@style/regularTextGrey15"
+            android:layout_width="@dimen/margin_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately."
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvReturnPolicy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddToCart"
+        style="@style/regularWhite17"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="@dimen/margin_60"
+        android:layout_marginTop="@dimen/margin_30"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:background="@drawable/btn_login_design"
+        android:text="@string/add_to_cart"
+        android:textAlignment="center"
+        android:layout_marginStart="@dimen/margin_30"
+        android:layout_marginEnd="@dimen/margin_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

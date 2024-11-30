@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/clParentLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_15"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rlImage"
+        android:layout_width="@dimen/size_124"
+        android:layout_height="@dimen/size_164"
+        android:elevation="@dimen/margin_0"
+        app:cardCornerRadius="@dimen/margin_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivImage"
+                android:layout_width="@dimen/size_124"
+                android:layout_height="match_parent"
+                android:background="@drawable/design_image_recipes"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_recipes_placeholder" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/BoldBlack12"
+                android:layout_width="@dimen/size_100"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:background="@drawable/design_text_white_back"
+                android:drawableStart="@drawable/ic_start_bestseller"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_7"
+                android:paddingEnd="@dimen/margin_5"
+                android:text="@string/best_seller" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDishName"
+        style="@style/BoldBlack18"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:maxLines="1"
+        android:paddingStart="@dimen/margin_15"
+        android:singleLine="true"
+        android:text="Bubur Ayam Pak Yono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rlImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDishMaterial"
+        style="@style/mediumGrey14"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:maxLines="1"
+        android:paddingStart="@dimen/margin_15"
+        android:singleLine="true"
+        android:text="Bubur Ayam Pak Yono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rlImage"
+        app:layout_constraintTop_toBottomOf="@id/tvDishName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRate"
+        style="@style/BoldBlack14"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_13"
+        android:drawableStart="@drawable/ic_green_bike"
+        android:drawablePadding="@dimen/margin_5"
+        android:maxLines="1"
+        android:paddingStart="@dimen/margin_15"
+        android:singleLine="true"
+        android:text="Rp 10.000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rlImage"
+        app:layout_constraintTop_toBottomOf="@id/tvDishMaterial" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTime"
+        style="@style/semiBoldGrey14"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_13"
+        android:drawableStart="@drawable/red_schedule_clock"
+        android:drawablePadding="@dimen/margin_5"
+        android:maxLines="1"
+        android:paddingStart="@dimen/margin_15"
+        android:singleLine="true"
+        android:text="12 min . 1 km"
+        app:fontFamily="@font/plus_jakarta_sans_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rlImage"
+        app:layout_constraintTop_toBottomOf="@id/tvRate" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRating"
+        style="@style/semiBoldGrey14"
+        android:layout_width="@dimen/margin_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_7"
+        android:drawableStart="@drawable/ic_star_rating"
+        android:drawablePadding="@dimen/margin_5"
+        android:maxLines="1"
+        android:paddingStart="@dimen/margin_15"
+        android:singleLine="true"
+        android:text="4.9 . 400+ratings"
+        app:fontFamily="@font/plus_jakarta_sans_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rlImage"
+        app:layout_constraintTop_toBottomOf="@id/tvTime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
